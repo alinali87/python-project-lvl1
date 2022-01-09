@@ -6,5 +6,7 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v2
+      - name: poetry install
+        run: make poetry-install
       - name: my-step
         run: make lint
