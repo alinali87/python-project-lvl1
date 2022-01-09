@@ -8,5 +8,7 @@ jobs:
         uses: actions/checkout@v2
       - name: poetry install
         run: make poetry-install
-      - name: my-step
+      - name: install deps
+        run: make install
+      - name: check with flake8
         run: make lint
