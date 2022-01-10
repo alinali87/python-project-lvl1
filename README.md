@@ -7,4 +7,4 @@
 
 ![example workflow](https://github.com/alinali87/python-project-lvl1/actions/workflows/linter-check.yml/badge.svg)
 
-[Example of the game brain-even](https://asciinema.org/a/sOIdLNdl3M6mUbjFOoN7tV7ig)
+[![asciicast](https://asciinema.org/a/sOIdLNdl3M6mUbjFOoN7tV7ig.svg)](https://asciinema.org/a/sOIdLNdl3M6mUbjFOoN7tV7ig)
