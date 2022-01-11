@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 from brain_games.cli import play_game
-from random import (
-    randint,
-    choice
-)
-import operator
+from random import randint
 
 
 def gen_question_brain_gcd():
