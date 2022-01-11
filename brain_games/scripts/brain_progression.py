@@ -13,8 +13,10 @@ def gen_question_brain_progression():
     step = randint(1, 5)
     end = start + step * 8
     sequence = list(map(str, range(start, end, step)))
-    missing = choice(sequence)
-    question = ' '.join(sequence).replace(missing, '..')
+    idx = choice(range(len(sequence)))
+    missing = sequence[idx]
+    sequence[idx] = '..'
+    question = ' '.join(sequence)
     correct_answer = missing
     return question, correct_answer
 
