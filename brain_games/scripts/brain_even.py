@@ -3,27 +3,23 @@ from brain_games.cli import (
     welcome_user,
     start_game,
     congratulate,
-    game_over
+    game_over,
+    play_game
 )
 from random import randint
 
 
+def gen_question_brain_even():
+    num = randint(1, 100)
+    if num % 2 == 0:
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
+    return num, correct_answer
+
+
 def main():
-    name = welcome_user()
-    start_game()
-    counter = 0
-    while counter < 3:
-        num = randint(1, 100)
-        print(f"Question: {num}")
-        answer = input('Your answer: ')
-        if (num % 2 == 0 and answer == 'yes') \
-                or (num % 2 == 1 and answer == 'no'):
-            print('Correct!')
-            counter += 1
-        else:
-            game_over(name, answer, num)
-            return
-    congratulate(name)
+    play_game('Answer "yes" if the number is even, otherwise answer "no".', gen_question_brain_even)
 
 
 if __name__ == '__main__':

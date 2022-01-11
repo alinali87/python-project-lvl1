@@ -7,4 +7,8 @@
 
 ![example workflow](https://github.com/alinali87/python-project-lvl1/actions/workflows/linter-check.yml/badge.svg)
 
+Brain-even game
 [![asciicast](https://asciinema.org/a/sOIdLNdl3M6mUbjFOoN7tV7ig.svg)](https://asciinema.org/a/sOIdLNdl3M6mUbjFOoN7tV7ig)
+
+Brain-calc game
+[![asciicast](https://asciinema.org/a/mxjadZHnxqgomJJNBY7ETavaq.svg)](https://asciinema.org/a/mxjadZHnxqgomJJNBY7ETavaq)
