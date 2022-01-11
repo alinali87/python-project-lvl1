@@ -1,11 +1,5 @@
 #!/usr/bin/env python
-from brain_games.cli import (
-    welcome_user,
-    start_game,
-    congratulate,
-    game_over,
-    play_game
-)
+from brain_games.cli import play_game
 from random import (
     randint,
     choice

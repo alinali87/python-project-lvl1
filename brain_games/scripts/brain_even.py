@@ -1,11 +1,5 @@
 #!/usr/bin/env python
-from brain_games.cli import (
-    welcome_user,
-    start_game,
-    congratulate,
-    game_over,
-    play_game
-)
+from brain_games.cli import play_game
 from random import randint
 
 
@@ -19,7 +13,8 @@ def gen_question_brain_even():
 
 
 def main():
-    play_game('Answer "yes" if the number is even, otherwise answer "no".', gen_question_brain_even)
+    play_game('Answer "yes" if the number is even, otherwise answer "no".',
+              gen_question_brain_even)
 
 
 if __name__ == '__main__':
