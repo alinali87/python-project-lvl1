@@ -1,19 +1,18 @@
 import prompt
 import random
-from operator import add, sub, mul
+from math import gcd
 from brain_games.cli import welcome_user
 from brain_games.utils import congrat_user, op_to_string
 
 
 def calc_game(name):
-    print('What is the result of the expression?')
+    print('Find the greatest common divisor of given numbers.')
     correct = 0
     while True:
         num1 = random.randint(1, 100)
         num2 = random.randint(1, 100)
-        op = random.choice([add, sub, mul])
-        correct_answer = op(num1, num2)
-        print(f"Question: {num1} {op_to_string(op)} {num2}")
+        correct_answer = gcd(num1, num2)
+        print(f"Question: {num1} {num2}")
         try:
             a_str = prompt.string("Your answer: ")
             a = int(a_str)

@@ -8,5 +8,9 @@
 [![Even Game](https://asciinema.org/a/WxSiQogPF9mJMHhN9PVo9u3tT.svg)](https://asciinema.org/a/WxSiQogPF9mJMHhN9PVo9u3tT)
 
 
-#### Brain Calc Gamge
+#### Brain Calc Game
 [![Calc Game](https://asciinema.org/a/GgeXuUAv7U865dl09tGqWCMav.svg)](https://asciinema.org/a/GgeXuUAv7U865dl09tGqWCMav)
+
+
+#### Brain GCD Game
+[![GCD Game](https://asciinema.org/a/IPYSjBiw3zFSf9BOp4qr0P4dM.svg)](https://asciinema.org/a/IPYSjBiw3zFSf9BOp4qr0P4dM)
