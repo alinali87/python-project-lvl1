@@ -6,13 +6,17 @@ from brain_games.utils import congrat_user
 
 
 def calc_game(name):
-    print('Find the greatest common divisor of given numbers.')
+    print('What number is missing in the progression?')
     correct = 0
     while True:
-        num1 = random.randint(1, 100)
-        num2 = random.randint(1, 100)
-        correct_answer = gcd(num1, num2)
-        print(f"Question: {num1} {num2}")
+        n = random.randint(6, 12)
+        start = random.randint(1, 10)
+        step = random.randint(1, 7)
+        nums = list(range(start, start + n * step + 1, step))
+        skip = random.choice(range(n))
+        correct_answer = nums[skip]
+        nums[skip] = ".."
+        print(f"Question: {' '.join(map(str, nums))}")
         try:
             a_str = prompt.string("Your answer: ")
             a = int(a_str)
