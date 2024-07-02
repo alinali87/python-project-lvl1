@@ -1,15 +1,7 @@
 import prompt
 import random
 from brain_games.cli import welcome_user
-
-
-def congrat_user(name: str):
-    """ Congrats if the user wins the game
-
-    Args:
-        name: name of the user
-    """
-    print(f"Congratulations, {name}!")
+from brain_games.utils import congrat_user
 
 
 def even_game():
