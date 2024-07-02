@@ -16,10 +16,13 @@ def even_game():
             correct += 1
             print("Correct!")
         else:
-            print(f"'{a}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            correct = 0
+            print(f"'{a}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.")
+            break
+            # correct = 0
         if correct == 3:
             return True
+    return False
 
 
 def main():

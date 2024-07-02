@@ -24,7 +24,8 @@ def calc_game(name):
             correct += 1
             print("Correct!")
         else:
-            print(f"'{a}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"'{a}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
             correct = 0
         if correct == 3:
