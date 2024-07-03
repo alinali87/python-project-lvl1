@@ -2,6 +2,8 @@ import prompt
 import random
 from brain_games.cli import welcome_user
 from brain_games.utils import congrat_user
+from brain_games.temp import play_game
+from brain_games.scripts.brain_even_old import gen_question_brain_even
 
 
 def even_game():
@@ -28,7 +30,8 @@ def even_game():
 
 
 def main():
-    even_game()
+    # even_game()
+    play_game('Answer "yes" if the number is even, otherwise answer "no".', gen_question_brain_even())
 
 
 if __name__ == '__main__':
