@@ -1,20 +1,34 @@
-#!/usr/bin/env python
-from brain_games.temp import play_game
-from random import randint
+import prompt
+import random
+from brain_games.cli import welcome_user
+from brain_games.utils import congrat_user
 
 
-def gen_question_brain_even():
-    num = randint(1, 100)
-    if num % 2 == 0:
-        correct_answer = 'yes'
-    else:
-        correct_answer = 'no'
-    return num, correct_answer
+def even_game():
+    name = welcome_user()
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+    correct = 0
+    while True:
+        num = random.randint(1, 100)
+        correct_answer = "yes" if num % 2 == 0 else "no"
+        print(f"Question: {num}")
+        a = prompt.string("Your answer: ")
+        if a == correct_answer:
+            correct += 1
+            print("Correct!")
+        else:
+            print(f"'{a}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.")
+            print(f"Let's try again, {name}")
+            return False
+            # correct = 0
+        if correct == 3:
+            congrat_user(name)
+            return True
 
 
 def main():
-    play_game('Answer "yes" if the number is even, otherwise answer "no".',
-              gen_question_brain_even)
+    even_game()
 
 
 if __name__ == '__main__':
