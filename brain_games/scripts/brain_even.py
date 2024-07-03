@@ -2,7 +2,6 @@ import prompt
 import random
 from brain_games.cli import welcome_user
 from brain_games.utils import congrat_user
-from brain_games.scripts.brain_even_old import gen_question_brain_even
 
 
 # TODO: refactor
@@ -21,14 +20,14 @@ def even_game():
         else:
             print(f"'{a}' is wrong answer ;(. "
                   f"Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {name}")
+            print(f"Let's try again, {name}!")
             return False
-            # correct = 0
         if correct >= 3:
             congrat_user(name)
             return True
 
 
+# TODO: clean
 def play_game(gen_question):
     name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
@@ -44,7 +43,7 @@ def play_game(gen_question):
         else:
             print(f"'{answer}' is wrong answer ;(. "
                   f"Correct answer was '{correct_answer}'.")
-            # print(f"Let's try again, {name}")
+            print(f"Let's try again, {name}")
             # if answer != correct_answer:
             #     print(f"'{answer}' is wrong answer ;(. "
             #           f"Correct answer was '{correct_answer}'.")
@@ -52,7 +51,7 @@ def play_game(gen_question):
             # print(f"'{answer}' is wrong answer ;(. "
             #       f"Correct answer was '{correct_answer}'.")
             # raise NotImplementedError("This 'if' branch is impossible")
-            print(f"Let's try again, {name}!")
+            # print(f"Let's try again, {name}!")
             return False
     congrat_user(name)
     # congratulate(name)
@@ -60,8 +59,8 @@ def play_game(gen_question):
 
 
 def main():
-    # even_game()
-    play_game(gen_question_brain_even)
+    even_game()
+    # play_game(gen_question_brain_even)
 
 
 if __name__ == '__main__':
