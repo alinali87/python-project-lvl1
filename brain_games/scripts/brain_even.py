@@ -31,7 +31,8 @@ def even_game():
 
 def main():
     # even_game()
-    play_game('Answer "yes" if the number is even, otherwise answer "no".', gen_question_brain_even)
+    play_game('Answer "yes" if the number is even, otherwise answer "no".',
+              gen_question_brain_even)
 
 
 if __name__ == '__main__':
