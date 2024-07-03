@@ -13,7 +13,7 @@ def generate_question():
     return num, correct_answer
 
 
-def even_game():
+def main():
     name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     correct = 0
@@ -31,4 +31,4 @@ def even_game():
 
 
 if __name__ == '__main__':
-    even_game()
+    main()
