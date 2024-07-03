@@ -5,6 +5,7 @@ from brain_games.utils import congrat_user
 from brain_games.scripts.brain_even_old import gen_question_brain_even
 from brain_games.temp import game_over
 
+
 # TODO: refactor
 def even_game():
     name = welcome_user()
@@ -42,10 +43,17 @@ def play_game(gen_question):
             print('Correct!')
             counter += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. "
-                  f"Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {name}")
-            game_over(name, answer, correct_answer)
+            # print(f"'{answer}' is wrong answer ;(. "
+            #       f"Correct answer was '{correct_answer}'.")
+            # print(f"Let's try again, {name}")
+            if answer != correct_answer:
+                print(f"'{answer}' is wrong answer ;(. "
+                      f"Correct answer was '{correct_answer}'.")
+            else:
+                # print(f"'{answer}' is wrong answer ;(. "
+                #       f"Correct answer was '{correct_answer}'.")
+                raise NotImplementedError("This 'if' branch is impossible")
+            print(f"Let's try again, {name}!")
             return False
     congrat_user(name)
     # congratulate(name)
