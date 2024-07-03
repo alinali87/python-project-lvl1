@@ -39,6 +39,7 @@ def play_game(start_text, gen_question):
             game_over(name, answer, correct_answer)
             return
     congratulate(name)
+    return True
 
 
 def find_gcd(a, b):
