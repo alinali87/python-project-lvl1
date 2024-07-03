@@ -14,15 +14,15 @@ def even_game():
         print(f"Question: {num}")
         a = prompt.string("Your answer: ")
         if a == correct_answer:
-            correct += 1
             print("Correct!")
+            correct += 1
         else:
             print(f"'{a}' is wrong answer ;(. "
                   f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}")
             return False
             # correct = 0
-        if correct == 3:
+        if correct >= 3:
             congrat_user(name)
             return True
 
