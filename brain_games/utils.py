@@ -2,26 +2,27 @@ from typing import Callable
 import operator
 
 
-def congrat_user(name: str):
-    """ Congrats if the user wins the game
+def make_congratulation_message(name: str) -> str:
+    """ Return congratulation message
 
     Args:
         name: name of the user
     """
-    print(f"Congratulations, {name}!")
+    return f"Congratulations, {name}!"
 
 
-def game_over(name: str, answer: str, correct_answer: str):
-    """ Print the message in case of wrong answer
+def make_game_over_message(name: str, answer: str, correct_answer: str) -> str:
+    """ Return game over message
 
     Args:
         name: name of the user
         answer: user's answer
         correct_answer: correct answer
     """
-    print(f"'{answer}' is wrong answer ;(. "
-          f"Correct answer was '{correct_answer}'.\n"
-          f"Let's try again, {name}!")
+    message = f"'{answer}' is wrong answer ;(. " \
+              f"Correct answer was '{correct_answer}'.\n"\
+              f"Let's try again, {name}!"
+    return message
 
 
 def op_to_string(op: Callable) -> str:
