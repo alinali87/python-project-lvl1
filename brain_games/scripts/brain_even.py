@@ -4,7 +4,7 @@ from brain_games.cli import welcome_user
 from brain_games.utils import congrat_user
 
 
-def even_game():
+def even_game(name):
     print('Answer "yes" if the number is even, otherwise answer "no".')
     correct = 0
     while True:
@@ -18,16 +18,16 @@ def even_game():
         else:
             print(f"'{a}' is wrong answer ;(. "
                   f"Correct answer was '{correct_answer}'.")
-            break
+            print(f"Let's try again, {name}")
+            return False
             # correct = 0
         if correct == 3:
             return True
-    return False
 
 
 def main():
     name = welcome_user()
-    if even_game():
+    if even_game(name):
         congrat_user(name)
 
 
